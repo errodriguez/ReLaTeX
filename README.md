@@ -1,5 +1,4 @@
-# ReLaTeX
-## TeX and LaTeX resources
+# ReLaTeX - Resorces for TeX and LaTeX
 
 A personal collection of several resources to learn and solve doubts on **TeX** and **LaTeX**.
 
