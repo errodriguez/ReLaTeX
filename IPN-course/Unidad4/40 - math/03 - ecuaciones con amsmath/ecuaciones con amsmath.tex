@@ -1,0 +1,34 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\title{Ecuaciones con amsmath}
+\author{Curso de \LaTeX}
+\date{}
+\begin{document}
+\maketitle
+
+El paquete \texttt{amsmath} nos provee de otros entornos para escribir nuestras ecuaciones. 
+
+\section{equation*}
+
+El entorno \texttt{equation*} nos permite escribir ecuaciones no enumeradas (de la misma forma que \texttt{displaymath}):
+
+\begin{equation*}
+  w = x_{i} + y_{i}\mu
+\end{equation*}
+
+\section{align y align*}
+
+Los entornos \texttt{align} y \texttt{align*} son utilizados para escribir ecuaciones de varios renglones conservando la alineación de la parte derecha de la ecuación:
+\begin{align}
+ f(x) &= (x+a)(x+b) \\
+ &= x^2 + (a+b)x + ab
+\end{align}
+
+\begin{align*}
+	f(x) &= (x+a)(x+b) \\
+	&= x^2 + (a+b)x + ab
+\end{align*}
+
+Tal y como con las matrices y tablas,  \textbackslash\textbackslash\ es utilizado para introducir un salto de línea, mientras que el caracter \& es utilizado para separar las dos partes de la ecuación, de manera similar a como se separan las columnas en una tabla.
+\end{document}

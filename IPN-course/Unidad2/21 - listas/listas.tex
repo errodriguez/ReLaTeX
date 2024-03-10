@@ -1,0 +1,55 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\title{Listas}
+\author{Curso de introducción a LaTeX}
+\begin{document}
+\maketitle
+
+Existen tres tipos de listas que podemos emplear en \LaTeX: listas con viñetas, listas enumeradas y listas de descripción.\\
+
+\noindent Ejemplo de una lista con viñetas:
+\begin{itemize}
+   	\item Elemento 1		
+    \item Elemento 2
+   	\item Elemento 3
+\end{itemize}
+
+\noindent Ejemplo de una lista enumerada:
+\begin{enumerate}
+    \item Aritmética
+    \item Álgebra
+    \item Trigonometría
+\end{enumerate}
+
+\noindent Una lista con sublistas: 
+\begin{itemize}
+   \item Elemento 1
+   \item Elemento 2
+           \begin{itemize}
+               \item Subelemento 1
+           \end{itemize}
+    \item Elemento 3
+\end{itemize}
+
+\noindent Una lista enumerada con sublistas: 
+\begin{enumerate}
+    \item Aritmética
+    \item Álgebra
+       	\begin{enumerate}
+   	    	\item Números enteros
+   	    	\item Jerarquía de operaciones
+       	\end{enumerate}
+    \item Trigonometría
+\end{enumerate}
+
+\noindent Las listas de descripción, por otro lado, son un tipo de lista especialmente diseñados para escribir diccionarios y glosarios de términos, por ejemplo:
+
+\begin{description}
+  \item[Axioma] Proposición que se considera ``evidente'' y se acepta sin requerir demostración previa.
+  \item[Teorema] Proposición que afirma una verdad demostrable.
+  \item[Corolario] (del latín \emph{corollarium}) es un término que se utiliza en matemáticas y en lógica para designar la evidencia de un teorema o de una definición ya demostrados, sin necesidad de invertir esfuerzo adicional en su demostración.
+\end{description}
+
+\noindent Ahora crea una lista con viñetas de tres elementos:
+
+\end{document}

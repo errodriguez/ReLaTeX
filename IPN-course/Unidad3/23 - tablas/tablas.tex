@@ -1,0 +1,54 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\title{Tablas}
+\author{Curso de introducción a LaTeX}
+\begin{document}
+\maketitle
+Primero desplegamos una tabla simple: \\
+
+\begin{tabular}{rcl}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9 \\
+	10 & 11& 12\\
+\end{tabular}\\ %Donde, {lll} especifica que queremos una tabla con 3 columnas y que su texto esté justificado a la izquierda
+
+Después, le añadimos separadores verticales: \\
+
+\begin{tabular}{ l | c || r }
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\
+  \end{tabular}\\ %Donde, {l | c || r} especifica que queremos una tabla con 3 columnas, la primera justificada a la izquierda, la segunda al centro y la tercera a la derecha, y que habrá dos separadores verticales entre las columnas, uno con una línea simple, y otro con una doble línea
+
+\hrule
+
+Ahora, crearemos una tabla con líneas horizontales: \\
+
+\begin{tabular}{rcl}
+\hline
+Autores & Año   & Título \\
+\hline
+Galván Magaña Felipe & 1989  & El alimento de los peces de pico \\
+Ochoa Báez Rosa Isabel & 1989  & Los picudos \\
+Hernández Carmona Gustavo & 1990  & Investigación en algas marinas... \\
+\hline
+\end{tabular} \\ %Donde, el comando \hline antes de cada línea de la tabla introduce una línea horizontal que se utilizaa como separador
+
+Una tabla con bordes se construiría así: \\
+
+\begin{tabular}{|l|l|l|}
+    \hline
+    Año de nacimiento & Nombre & Nivel SNI \\
+    \hline
+    1982 & Sandra Rodríguez & 2 \\
+    \hline
+    1984 & Raúl Estrada & 1 \\
+    \hline
+    1989 & Erika Martínez & Candidato \\
+    \hline    
+\end{tabular} \\%Nótese que en este caso, la última fila necesita la doble barra invertida \\ ya que hay un elemento debajo, \hline. 
+
+Ahora, añade a este ejemplo una nueva tabla con 3 columnas y 3 renglones, que utilice una línea horizontal al inicio y al pie de la tabla:
+
+\end{document}

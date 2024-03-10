@@ -1,0 +1,72 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} %Para soportar los entornos para matrices
+\usepackage{mathtools} %Para soportar alinear columnas
+\author{Curso de \LaTeX}
+\title{Matrices}
+\begin{document}
+\maketitle
+
+Las matrices se pueden escribir con el entorno \texttt{array}, pero el paquete \texttt{amsmath} provee una mejor solución con el entorno \texttt{matrix}: al igual que en otras estructuras tipo tabla, el contenido está definido por renglones, con columnas que se separan con el caracter \& y un nuevo renglón es insertado utilizado una doble diagonal invertida (\textbackslash\textbackslash):
+
+\[
+\begin{matrix}
+  a & b & c \\
+  d & e & f \\
+  g & h & i
+\end{matrix}
+\]
+
+Para especificar la alineación de las columnas, el paquete \texttt{mathtools} provee el entorno \texttt{matrix*}:
+
+\[
+\begin{matrix}
+  -1 & 3 \\
+  2 & -4
+ \end{matrix}
+ =
+ \begin{matrix*}[r]
+  -1 & 3 \\
+  2 & -4
+ \end{matrix*}
+\]
+
+La alineación por defecto en c (centrada) pero puedes utilizar cualquiera de los tipos de columnas soportados por el entorno \texttt{array}.
+
+Hay seis versiones del entorno matrix con diferentes delimitadores: matrix (ninguno), pmatrix (, bmatrix [, Bmatrix \{, vmatrix \textbar y Vmatrix \textbardbl. De esta forma no tenemos que utilizar las instrucciones \textbackslash\texttt{left} y \textbackslash\texttt{right} como en el entorno array. Otra de las ventajas del entorno matrix es que no es necesario especificar el número de columnas del arreglo. Por defecto, soporta un máximo de 10 columnas, pero puede configurarse para que admita más (aunque no sería muy frecuente construir matrices tan grandes):
+
+\[
+\begin{pmatrix}
+	1 & 9 & -13 \\
+	20 & 5 & -6
+\end{pmatrix}
+\]
+
+
+\[
+\begin{vmatrix}
+	1 & 9 & -13 \\
+	20 & 5 & -6
+\end{vmatrix}
+\]
+
+
+\[
+\begin{bmatrix}
+	1 & 9 & -13 \\
+	20 & 5 & -6
+\end{bmatrix}
+\]
+
+
+Al escribir las matrices de tamaño arbitrarios, es común el uso de puntos triples horizontales, verticales y diagonales (conocidos como elipses) para llenar ciertas columnas y filas. Estos puntos pueden ser especificados utilizando los comandos \textbackslash\texttt{cdots}, \textbackslash\texttt{vdots} y \textbackslash\texttt{ddots}:
+
+\[
+\begin{bmatrix}
+p_{11} & p_{12} & \cdots & p_{1n} \\
+p_{21} & p_{22} & \cdots & p_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+p_{m1} & p_{m2} & \cdots & p_{mn}
+\end{bmatrix}
+\]
+\end{document}

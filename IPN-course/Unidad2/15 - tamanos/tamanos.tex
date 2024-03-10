@@ -1,0 +1,23 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\title{Definir el tamaño del texto}
+\author{Curso de introducción a LaTeX}
+\begin{document}
+\maketitle
+Los distintos tamaños disponibles son {\tiny tiny},
+{\scriptsize scriptsize},
+{\footnotesize footnotesize},
+{\small small},
+{\normalsize normalsize},
+{\large large},
+{\Large Large},
+{\LARGE LARGE},
+{\huge huge}, {\Huge Huge}.
+
+Observamos que con la {\small opción} 12pt los tamaños \texttt{\textbackslash huge} y \texttt{\textbackslash Huge} son iguales. No sucede lo mismo a 10pt.
+
+Las declaración \texttt{\textbackslash normalfont} reestablece las características por defecto excepto el tamaño.
+
+Pruébalo en el siguiente texto:\\
+{\tiny diminuto}, {\scriptsize script},{\footnotesize  nota de pie}, {\normalsize normal}, {\large grande}, {\Large Grande}, {\LARGE GRANDE}, {\huge enorme}, {\Huge Enorme}.
+\end{document}

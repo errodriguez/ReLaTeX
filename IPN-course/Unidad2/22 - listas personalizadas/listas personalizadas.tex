@@ -1,0 +1,51 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate} %Para personalizar la apariencia de la enumeración
+\title{Listas personalizadas}
+\author{Curso de introducción a LaTeX}
+\begin{document}
+\maketitle
+
+Podemos cambiar el icono mostrado en los elementos de una lista simple con la opción del comando \textbackslash\texttt{item}:
+
+\begin{itemize}
+\item[*]  Números complejos
+\item[+] Funciones analíticas
+\item Integración compleja
+\end{itemize}
+
+Si queremos modificar todos los iconos por una nueva imagen de una sola vez, podemos utilizar el comando \textbackslash\texttt{renewcommand}:
+
+\renewcommand{\labelitemi}{$\rightarrow$}
+\begin{itemize}
+\item Números complejos
+\item Funciones analíticas
+\item Integración compleja
+\end{itemize}
+
+Finalmente, para modificar la forma en que \LaTeX enumera las listas, podemos utilizar la opción del entorno \texttt{enumerate} (gracias al paquete \texttt{enumerate}), por ejemplo para mostrar una enumeración con los temas de un curso:
+
+\section{Números complejos}
+Los contenidos que se imparten en la parte de  variable
+compleja son:
+
+\begin{enumerate}[\bfseries Tem{a} 1 \ --- ]
+  \item Números complejos
+     \begin{itemize}
+       \item \emph{Construcción de los números complejos.}
+       \item Forma polar. \textsf{Forma exponencial.}
+     \end{itemize}
+  \item Funciones analíticas
+     \begin{itemize}
+       \item \textbf{Funciones de una variable compleja.}
+       \item Ecuaciones de Cauchy-Riemann.
+     \end{itemize}
+  \item Integración compleja
+     \begin{description}
+       \item[Teorema de Cauchy--Goursat] 
+        Demostración y ejemplos de aplicaciones
+       \item[Primitivas e Independencia del camino]
+        Aplicaciones para la teoría de polos y residuos
+     \end{description}
+\end{enumerate}
+\end{document}

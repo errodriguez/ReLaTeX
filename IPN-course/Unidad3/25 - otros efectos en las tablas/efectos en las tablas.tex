@@ -1,0 +1,76 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{colortbl} %Para poder utilizar el comando \rowcolor
+\usepackage{multirow} %Para combinar múltiples renglones
+\usepackage{hyperref} %Para soportar hyperenlaces (URLs)
+\usepackage{rotating} %Para soportar el comando \rotatebox
+\title{Más efectos sobre las tablas}
+\author{Curso de introducción a LaTeX}
+\begin{document}
+Colores en tablas:\\
+\definecolor{LightBlue}{rgb}{0.8,0.85,1}
+\begin{tabular}{ccc}
+    \rowcolor{LightBlue} TextoCelda1 & TextoCelda2 & TextoCelda3 \\
+    TextoCelda4 & TextoCelda5 & TextoCelda6 \\
+    TextoCelda7 & TextoCelda8 & TextoCelda9
+\end{tabular}
+%En este ejemplo, definimos un nuevo color LightBlue y se lo asignamos como color de fondo a la primera fila. 
+
+\vspace{1cm}
+
+Columnas de extensión múltiple (combinar celdas):\\
+\begin{tabular}{ |l|l| }
+  \hline
+  \multicolumn{2}{|c|}{Tabla de equipos} \\
+  \hline
+  GK & Paul Robinson \\
+  LB & Lucus Radebe \\
+  DC & Michael Duberry \\
+  DC & Dominic Matteo \\
+  RB & Dider Domi \\
+  MC & David Batty \\
+  MC & Eirik Bakke \\
+  MC & Jody Morris \\
+  FW & Jamie McMaster \\
+  ST & Alan Smith \\
+  ST & Mark Viduka \\
+  \hline
+\end{tabular}
+%En éste ejemplo, definimos que el primer renglon ocupará 2 columnas de la tabla, con su propia alineación al centro, ignorando la alineación definida más arriba
+
+\vspace{1cm}
+
+Combinar celdas en varios renglones:\\
+\begin{tabular}{ccccc}
+	\hline
+	& \textbf{Sexo} & \textbf{Grupo} & \textbf{Estatura} & \textbf{Peso}\\
+	\hline
+	\multirow{6}{*}{\rotatebox{90}{\textbf{Observaciones }}} & F & Adulto & 1.6 & 60\\
+	& M & Menor & 1.3 & 45\\
+	& M & Adulto & 1.7 & 85\\
+	& F & Adulto & 1.5 & 74\\
+	& M & Adulto & 1.6 & 77\\
+	& F & Anciano & .5 & 65\\
+	& F & Menor & 1.2 & 43\\
+	\hline
+\end{tabular}
+%En este tercer ejemplo, definimos que la primera columna del segundo renglon ocupará seis renglones de la tabla y tendrá un ancho natural (ajustándose al ancho del contenido). El texto aparece rotado verticalmente con el comando \rotatebox, que nos permite rotar verticualmente cualquier elemento del documento
+
+\vspace{1cm}
+
+Definiendo varias columnas de un golpe:\\
+\begin{tabular}{l*{6}{c}r}
+	Equipo           & J & G & E & P & F  & C & Pts \\
+	\hline
+	Manchester United & 6 & 4 & 0 & 2 & 10 & 5 & 12  \\
+	Celtic            & 6 & 3 & 0 & 3 &  8 & 9 &  9  \\
+	Benfica           & 6 & 2 & 1 & 3 &  7 & 8 &  7  \\
+	FC Copenhagen     & 6 & 2 & 1 & 3 &  5 & 8 &  7  \\
+\end{tabular}
+%En este último ejemplo definimos varias columnas con una sola instrucción: *{6}{c}, lo cual significa que habrá 6 columnas con alineación al centro, antecedidas por una columna con alineación a la izquierda y seguidas de una columna con alineación a la derecha
+
+\vspace{1cm}
+
+También podemos generar tablas de datos más fácilmente utilizando la he\-rra\-mienta \textbf{LaTeX Table Generator} en el sitio: \url{https://tablesgenerator.com/}, que incluye una función para transformar tablas desde Excel o Calc a \LaTeX (File $\rightarrow$ Paste table data...).
+
+\end{document}

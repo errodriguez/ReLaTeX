@@ -1,0 +1,37 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} %Para escribir ecuaciones no enumeradas y referencias a ecuaciones con paréntesis
+\usepackage[hidelinks]{hyperref}
+\title{Referencias cruzadas a ecuaciones}
+\author{Curso de \LaTeX}
+\begin{document}
+\maketitle
+
+Podemos hacer referencias cruzadas a las ecuaciones enumeradas, utilizando la instrucción \texttt{\textbackslash label} dentro del entorno \texttt{\textbackslash equation} como en el siguiente ejemplo:
+
+Y después de experimentar mucho con diferentes técnicas resulta que la ecuación \ref{eq:sumatoria} es muy importante.
+\begin{equation} \label{eq:sumatoria}
+  w = \sum_{i=1}^{n} {(x_{i}+y_{i})^{2}}   
+\end{equation}
+
+... y como sabemos que
+\begin{equation*} %Con el * indicamos que la ecuación no estará numerada (requiere el paquete amsmath)
+  \lim_{x \to 0} {(x^{2} + 2x + 4)} = 4
+\end{equation*}
+se concluye que...
+
+\vspace{0.5cm}
+
+También podemos hacer referencia a varias ecuaciones contenidas dentro de un entorno \texttt{eqnarray} (funciona también con \texttt{align}):
+
+\begin{eqnarray}
+	c^2&=&a^2 + b^2\label{eq:teorema}\\
+	c &=&\sqrt{a^2 + b^2}\label{eq:hipotenusa}
+\end{eqnarray}
+
+Como podemos observar, de la ecuación \ref{eq:teorema} (que representa el teorema de Pitágoras),  la hipotenusa puede despejarse como se muestra en la ecuación \ref{eq:hipotenusa}.
+
+O dicho de otra forma, de \eqref{eq:teorema} se puede deducir \eqref{eq:hipotenusa}  para obtener el valor de la hipotenusa (lado mayor). %Nota: podemos ver que el comando \eqref hace la referencia incluyendo el número de la ecuación entre paréntesis, una forma pensada para hacer referencias específicas a ecuaciones (sin tener que mencionar la palabra ecuación)
+
+Puedes revisar más comandos y ejemplos avanzados del entorno matemático y del paquete \textbackslash\texttt{amsmath} en la wiki: \url{http://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics}
+\end{document}

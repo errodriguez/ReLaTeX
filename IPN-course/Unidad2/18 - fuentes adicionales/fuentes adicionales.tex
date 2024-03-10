@@ -1,0 +1,61 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{times} %Cambiamos la fuente de todo el documento a una fuente postscript (en este caso times). Para cada una de estas fuentes existe un paquete que la soporta, otros paquetes disponibles para usarse directamente son: pslatex, newcent, utopia o palatino. El catálogo completo de paquetes de fuentes aparece en el enlace al final del documento.
+%\usepackage{palatino}
+\usepackage{hyperref} %Para soportar el uso de hyperenlaces
+\title{Fuentes externas}
+\author{Introducción a LaTeX}
+\begin{document}
+%El título y el cuerpo se imprimirá en Times:
+\maketitle
+
+Cuerpo del texto (en Times):
+
+- Lorem ipsum dolor sit amet, consectitur adipiscing elit.
+
+%Si introducimos un texto con \textsf se imprimirá en Helvetica
+Texto sin serifas (en Helvetica):
+
+- \textsf{Lorem ipsum dolor sit amet, consectitur adipiscing elit.}
+
+%Mientras que el texto obtenido con \texttt se imprimirá en Curier
+Texto de máquina de escribir (en Courier):
+
+- \texttt{Lorem ipsum dolor sit amet, consectitur adipiscing elit.}
+
+\vspace{0.3cm}
+
+Helvetica aplicada directamente al texto:
+
+\fontfamily{phv}
+\selectfont
+- Lorem ipsum dolor sit amet, consectitur adipiscing elit.
+
+
+Palatino aplicada directamente al texto: 
+
+\fontfamily{ppl}
+\selectfont
+- Lorem ipsum dolor sit amet, consectitur adipiscing elit.
+
+\vspace{0.3cm}
+
+Fuentes originales:
+%Computer Modern Roman:
+\fontfamily{cmr}
+\selectfont
+- {Lorem ipsum dolor sit amet, consectitur adipiscing elit.}
+
+%Y con la fuente original Sans Serif:
+\fontfamily{cmss}
+\selectfont
+- {Lorem ipsum dolor sit amet, consectitur adipiscing elit.}
+
+Para ver la lista completa de fuentes soportados por \fontfamily consultar la tabla del bloc de notas de la clase o en los documentos de la bibliografía
+
+\vspace{0.3cm}
+
+Para revisar el catálogo completo de paquetes de fuentes de \LaTeX \ visita: 
+
+\url{https://tug.org/FontCatalogue/}
+\end{document}

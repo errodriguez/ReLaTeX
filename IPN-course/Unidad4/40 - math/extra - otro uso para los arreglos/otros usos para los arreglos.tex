@@ -1,0 +1,29 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} %Para soportar el entorno cases
+\author{Tu nombre}
+\title{Otro uso para los arreglos}
+\begin{document}
+\maketitle
+
+Podemos utilizar el comando \textbackslash\texttt{array} combinándolo con los delimitadores para escribir funciones definidas por partes:
+
+\[ 
+z = \left\{
+              \begin{array}{ll}
+                   1 & (x>0)\\
+                   0 & (x<0)
+              \end{array}
+     \right.
+\] %El comando \right. produce un delimitador de cierre invisible, de forma que se delimitará correctamente el contenido sin mostrar la llave al final
+
+Este mismo efecto puede lograrse directamente con el entorno \textbackslash\texttt{cases}\footnote{Requiere el paquete \texttt{amsmath}}:
+
+\[
+ u(x) =
+  \begin{cases}
+   \exp{x} & \text{Si } x\geq0 \\
+   1       & \text{Si } x < 0
+  \end{cases}
+\]
+\end{document}

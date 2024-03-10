@@ -1,0 +1,32 @@
+\documentclass[12pt,letterpaper,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\author{Curso de LaTeX}
+\title{Personalizar encabezado y pie de página}
+%Modificar los margenes del documento manualmente
+\usepackage{fancyhdr} %Para poder personalizar los encabezados y pies de las páginas
+\usepackage{lastpage} %Para poder acceder al número final de páginas 
+\lhead{Curso de Introducción a \LaTeX} %Encabezado izquierdo
+\rhead{CICIMAR-IPN} %Encabezado derecho
+\cfoot{} %Sin paginación al centro del pie de página
+\rfoot{Página \thepage\ de \pageref{LastPage}} %Escribir la paginación a la izquierda dentro del pie de página incluyendo el número de la última página
+\begin{document}
+\frontmatter
+\maketitle
+\chapter*{Lorem ipsum dolor}
+\lipsum
+\tableofcontents
+\pagestyle{fancy} %Establecer el estilo de página a fancy para que aplique los estilos personalizados a partir de aquí
+\mainmatter
+\chapter{Volutpat leo habitant}
+% Debido a que el comando chapter reestablece el estilo de paginación y encabezados por defecto, hay que indicar que utilice el estilo fancy:
+\thispagestyle{fancy}
+\lipsum[1]
+\section{Lorem ipsum}
+\lipsum
+\chapter{Adipiscing diam euismod}
+\thispagestyle{fancy} % Repetir para cada capítulo (no es necesario con las secciones)
+\lipsum[2]
+\section{Phasellus}
+\lipsum
+\end{document}

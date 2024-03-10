@@ -1,0 +1,57 @@
+%documentclass[letterpaper,11pt,twocolumn]{IEEEtran} %Otras clases de artículos soportados:  
+% \documentclass[letterpaper,11pt]{article} %Otras clases de artículos soportados:  
+% \documentclass[letterpaper,11pt]{proc} %Otras clases de artículos soportados:  
+ \documentclass[letterpaper,11pt]{achemso} %Otras clases de artículos soportados:  
+% IEEEtran - Manuscritos para artículos de revista en el formato de la IEEE
+% IEEEconf - Manuscritos para artículos de conferencias en el formato de la IEEE
+% acmart - Manuscritos para artículos de revista en el formato de la  ACM
+% apa7 - Manuscritos para artículos de revista y de conferencias en el formato de la APA (Séptima edición)
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish, mexico]{babel}
+\title{Edición de documentos científicos con \LaTeX}
+\author{Curso de introducción a \LaTeX}
+\date{5 de diciembre, 2022}
+
+\begin{document}
+	\maketitle %Imprimimos el encabezado del documento
+	\tableofcontents
+	
+	\begin{abstract}
+		\LaTeX\ es un poderoso sistema de composición de textos, que se utiliza
+		para la producción de documentos científicos y matemáticos
+		de alta calidad tipográfica. A diferencia de los editores WYSIWYG (What You See Is What You Get, en español ``Lo que ves es lo que obtienes'') como Word y FrameMaker 
+		utiliza archivos de texto plano que contienen 
+		comandos de formato. Es grande, de código abierto, estable y usado
+		por muchas editoriales de textos técnicos y científicos. Es
+		también relativamente desconocido en la comunidad de escritores de textos técnicos y científicos.\\
+		
+		\textbf{Palabras clave:}\ Tipografía; Composición; Comandos de formato.
+	\end{abstract}
+	
+	\section{Tex y LaTeX} %Una sección del documento
+	
+	\TeX\ es un programa informático de los documentos de composición tipográfica, creado por D. E. Knuth in 1977. Se necesita un fichero automatizado debidamente preparado y lo convierte en un formulario que se puede imprimir en muchos tipos de impresoras, incluyendo impresoras matriciales, impresoras láser y máquinas de composición tipográfica de alta resolución. \LaTeX\ es un conjunto de macros para TeX que tiene por objeto reducir la tarea del usuario para el único papel de escribir el contenido del documento, LaTeX se encarga de todo el proceso de formateo. Varios editores bien establecidos ahora utilizan TeX o LaTeX para libros maquetados y revistas matemáticas. También es muy apreciada por los usuarios que cuidan de tipografía, el formato compatible, escrito en colaboración eficiente y formatos abiertos.
+	
+	\section{ Otra sección}
+	
+	Texto...
+	
+	\section{Filosofía de uso} %Una segunda sección en el documento
+	
+	Una de las cosas más frustrantes para los principiantes e incluso para los usuarios avanzados que pueden surgir utilizando \LaTeX, es la falta de flexibilidad en relación con el diseño y configuración del documento. Si desea diseñar su documento de manera muy específica, es posible que tenga problemas para realizar esto. Tenga en cuenta que LaTeX hace el formato por usted, y sobre todo de la manera correcta. Si no es exactamente lo que usted desea, entonces la forma en LaTeX es por lo menos no peor, si no mejor. Una forma de verlo es que LaTeX es un paquete de macros para TeX que tiene como objetivo llevar a cabo todo lo relacionado con el formato del documento, por lo que el escritor sólo tiene que preocuparse por el contenido. Si usted realmente quiere flexibilidad, utilice TeX en su lugar.
+	
+	\subsection{Macros adicionales}
+	
+	Una solución a este dilema es hacer uso de las posibilidades modulares de LaTeX. Usted puede crear sus propias macros, o utilizar macros desarrolladas por otros. Probablemente no es la primera persona para hacer frente a algunos problemas de formato especial, y alguien que se encontró con un problema similar antes pudo haber publicado su solución como un paquete.
+	
+	\subsubsection{CTAN}
+	
+	CTAN\footnote{http://www.ctan.org/} es un buen lugar para encontrar muchos recursos relacionados con TeX y paquetes de derivados. Es el primer lugar donde debe comenzar la búsqueda. Entre los paquetes destacados encontramos:
+	
+	\paragraph{abstract} (Nombre del paquete) Paquete que nos permite personalizar la tipografía dentro del entorno abstract, y especialmente ofrece una opción para manejar un resumen a una columna con un documento a dos columnas.
+	
+	\paragraph{authblk} Para introducir bloques para los autores y sus afiliaciones, permitiendo a varios autores compartir una misma afiliación.
+	
+	%\subparagraph{babel} <-- No soportado en IEEEtran
+	\paragraph{babel} Este paquete gestiona reglas tipográficas (y otras) determinadas culturalmente para una amplia gama de idiomas. Un documento puede seleccionar un solo idioma para ser admitido, o puede seleccionar varios, en cuyo caso el documento puede cambiar de un idioma a otro en una variedad de formas.
+\end{document}

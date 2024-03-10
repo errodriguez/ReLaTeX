@@ -1,0 +1,57 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, mexico]{babel} %Agregamos la opción mexico al paquete babel, para utilizar un español de este país en el documento, de modo que se imprimirá automáticamente la palabra ''Tabla'' en lugar de ''Cuadro'' en la leyenda de la tabla
+\usepackage{booktabs} %Para incluir líneas horizontales en las tablas especiales para libros (con los comandos \toprule, \midrule y \bottomrule)
+\title{Tablas con leyendas}
+\author{Curso de introducción a LaTeX}
+\begin{document}
+\maketitle
+
+Para incluir tablas con una leyenda, podemos utilizar el entorno \texttt{table}, que brinda varias funciones para facilitar el manejo de tablas con información en nuestros documentos.
+
+\begin{table}[h]
+%
+\caption{Carga máxima y tensión nominal.} %Leyenda de la tabla
+\centering %Centra la tabla dentro del entorno table
+%
+\begin{tabular}{clccc}
+\toprule
+%
+$D$ & & $P_u$ & $\sigma_N$ \\
+(in)& & (lbs) & (psi) \\
+\midrule
+%
+5 & test 1 & 285 & $ > 38.00$ \\
+& test 2 & 287 & 38.27 \\
+& test 3 & 230 & 30.67 \\
+10 & test 1 & 430 & 28.67 \\
+& test 2 & 433 & 28.87 \\
+& test 3 & 431 & 28.73 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La opción [h] indica a \LaTeX que deberá colocar la tabla justo en el lugar en donde aparece en este texto, de otra forma, \LaTeX\ la colocaría en un sitio especial dentro de la página siguiendo el criterio tbp (top, bottom y page).
+
+
+\begin{table}[h]
+%
+\caption{Reporte del tiempo.} %Leyenda de la tabla
+\centering %Centra la tabla dentro del entorno tabular
+\begin{tabular}{ | l | l | l | p{6cm} |}
+\hline
+ Day & Min Temp & Max Temp & Summary \\ \hline
+ Monday & 11C & 22C & A clear day with lots of sunshine.  
+ However, the strong breeze will bring down the temperatures. \\
+\hline
+ Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells
+ across most of Scotland and Northern Ireland,
+ but rain reaching the far northwest. \\
+\hline
+ Wednesday & 10C & 21C & Rain will still linger for the morning.
+ Conditions will improve by early afternoon and continue
+ throughout the evening. \\
+\hline
+\end{tabular}
+\end{table}
+\end{document}

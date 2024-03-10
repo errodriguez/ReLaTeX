@@ -1,0 +1,34 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[hidelinks]{hyperref}
+\author{Curso de \LaTeX}
+\title{Sumatorias e integrales}
+\begin{document}
+\maketitle
+
+Los comandos \textbackslash \texttt{sum} y \textbackslash \texttt{int} insertan los símbolos de sumatoria e integral respectivamente, con límites especificados utilizando el signo de intercalación (\^\space) y el guión bajo (\_). La notación típica de la sumatoria es:
+
+\begin{equation}
+\sum_{i=1}^{10} t_i
+\end{equation}
+
+Al escribir la sumatoria en línea como el texto, ésta se compacta para aparecer en una sola línea, ejemplo: $ \sum_{i=1}^{10} t_i $. Por otro lado, en la integral los límites siguen la misma notación:
+
+\begin{equation}
+\int_a^b f(x) dx
+\end{equation}
+
+Es también importante representar la integración con una d vertical, que en el entorno matemático se obtiene a través del comando \textbackslash mathrm\{\}, y con un pequeño espacio que la separe del integrando, lo cual es conseguido con el comando que combina la diagonal invertida con la coma (\textbackslash ,), tal y como se muestra a continuación:
+
+\begin{equation}
+\int_0^\infty e^{-x}\,\mathrm{d}x
+\end{equation}
+
+Hay un gran número de comandos que definen sus límites de manera similar a las sumatorias e integrales, por ejemplo:
+
+\begin{displaymath}
+\oint_1^n
+\end{displaymath}
+
+Puedes consultar la lista completa consulta en la guía: \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics#Sums\_and\_integrals}
+\end{document}

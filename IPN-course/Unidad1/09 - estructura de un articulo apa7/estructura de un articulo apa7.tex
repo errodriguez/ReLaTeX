@@ -1,0 +1,73 @@
+\documentclass[12pt,letterpaper,jou]{apa7} %Clase de documento para artículos científicos en una revista APA (formato APA  7ma edición) https://ctan.org/pkg/apa7
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, mexico]{babel}
+\title{Estructura de un artículo en estilo APA Séptima Edición}
+\authorsnames[1,2]{ Daniel A. Weiss, Alberto González} %Comando para múltiples autores exclusivo de la clase de documento apa7
+\authorsaffiliations{{Autor de la clase  \LaTeX\ apa7}, {Autor del curso de introducción a \LaTeX}} %Comando para múltiples filiaciones exclusivo de la clase de documento apa7
+%Otros comandos exclusivo de la clase de documento apa7, para los encabezados de las páginas:
+\shorttitle{Bibliografía en APA 7} %Título corto del artículo (de la subclase man y stu)
+\journal{\LaTeX\ Magazine} %Nombre de la revista u otra anotación (de la subclase jou y doc)
+\volume{25 (2): 1-2} %Volumen, número, páginas (de la subclase jou y doc)
+
+%Personalización de las etiquetas generadas por el paquete:
+\renewcommand{\lastauthorseparator}{y} %Para cambiar el separador del último autor
+\renewcommand{\acksname}{Nota del autor} %Para cambiar la etiqueta de las notas del autor
+\renewcommand{\keywordname}{Palabras clave} %Para cambiar la etiqueta de las palabras clave
+\renewcommand{\notesname}{Notas}  %Para cambiar la etiqueta de las notas
+\renewcommand{\notelabel}{Nota}  %Para cambiar la etiqueta de la nota en las tablas y figuras
+\begin{document}
+%Comando para capturar el resumen exclusivo de la clase de documento apa7
+\abstract{LaTeX es un poderoso sistema de composición de textos, que se utiliza
+para la producción de documentos científicos y matemáticos de alta calidad tipográfica. A diferencia de los editores WYSIWYG (What You See Is What You Get, en español ``Lo que ves es lo que obtienes'') como Word y FrameMaker utiliza archivos de texto plano que contienen 
+comandos de formato. Es grande, de código abierto, estable y usado 	por muchas editoriales de textos técnicos y científicos. Es también relativamente desconocido en la comunidad de escritores de textos técnicos y científicos.}
+
+%Comando para palabras clave exclusivo de la clase de documento apa7
+\keywords{Tipografía; Composición; Comandos de formato}
+
+\maketitle
+
+\section{Tex y LaTeX} %Una sección del documento
+	
+\TeX\ es un programa informático de los documentos de composición tipográfica, creado por D. E. Knuth in 1977. Se necesita un fichero automatizado debidamente preparado y lo convierte en un formulario que se puede imprimir en muchos tipos de impresoras, incluyendo impresoras matriciales, impresoras láser y máquinas de composición tipográfica de alta resolución. \LaTeX\ es un conjunto de macros para TeX que tiene por objeto reducir la tarea del usuario para el único papel de escribir el contenido del documento, LaTeX se encarga de todo el proceso de formateo. Varios editores bien establecidos ahora utilizan TeX o LaTeX para libros maquetados y revistas matemáticas. También es muy apreciada por los usuarios que cuidan de tipografía, el formato compatible, escrito en colaboración eficiente y formatos abiertos. 
+	
+\section{Filosofía de uso} %Una segunda sección en el documento
+	
+Una de las cosas más frustrantes para los principiantes e incluso para los usuarios avanzados que pueden surgir utilizando LaTeX, es la falta de flexibilidad en relación con el diseño y configuración del documento. Si desea diseñar su documento de manera muy específica, es posible que tenga problemas para realizar esto. Tenga en cuenta que LaTeX\ hace el formato por usted, y sobre todo de la manera correcta. Si no es exactamente lo que usted desea, entonces la forma en LaTeX es por lo menos no peor, si no mejor. Una forma de verlo es que LaTeX es un paquete de macros para TeX que tiene como objetivo llevar a cabo todo lo relacionado con el formato del documento, por lo que el escritor sólo tiene que preocuparse por el contenido. Si usted realmente quiere flexibilidad, utilice TeX en su lugar.
+
+Una solución a este dilema es hacer uso de las posibilidades modulares de LaTeX. Usted puede crear sus propias macros, o utilizar macros desarrolladas por otros. Probablemente no es la primera persona para hacer frente a algunos problemas de formato especial, y alguien que se encontró con un problema similar antes pudo haber publicado su solución como un paquete.
+
+\subsubsection{El repositorio CTAN}
+
+CTAN\footnote{http://www.ctan.org/} es un buen lugar para encontrar muchos recursos relacionados con TeX y paquetes de derivados. Es el primer lugar donde debe comenzar la búsqueda. Entre los paquetes destacados encontramos:
+
+\paragraph{abstract} Paquete que nos permite personalizar la tipografía dentro del entorno abstract, y especialmente ofrece una opción para manejar un resumen a una columna con un documento a dos columnas.
+
+\paragraph{authblk} Para introducir bloques para los autores y sus afiliaciones, permitiendo a varios autores compartir una misma afiliación.
+
+\paragraph{babel} Este paquete gestiona reglas tipográficas (y otras) determinadas culturalmente para una amplia gama de idiomas. Un documento puede seleccionar un solo idioma para ser admitido, o puede seleccionar varios, en cuyo caso el documento puede cambiar de un idioma a otro en una variedad de formas.
+
+\section{La clase APA 7}
+
+La clase de documento apa7  formatea documentos en estilo APA (7ª edición). Proporciona un conjunto completo de funciones en cuatro modos de salida diferentes (aspecto similar a un diario, manuscrito a doble espacio, manuscrito de estudiante a doble espacio, documento similar a LaTeX). La clase puede enmascarar la identidad del autor de las copias para su uso en la revisión por pares enmascarada.
+
+\subsection{Antecedentes}
+
+El manual de publicación de la Asociación Americana de Psicología es ampliamente utilizado en las ciencias sociales. La actualización más reciente, en 2019, alteró las pautas de formato y, por lo tanto, se hicieron adecuaciones para corregir las discrepancias con el formato anterior . La clase APA7 es una actualización del código anterior de la clase APA6. En esta nueva clase de documento, se ha agregado el tipo de manuscrito estudiantil (stu).
+
+\subsubsection{Sobre la actualización a APA 7}
+
+La mayoría de las revistas en las ciencias sociales requieren que los manuscritos se formateen de conformidad con el Manual de publicación de la Asociación Americana de Psicología, que se actualiza periódicamente.La séptima edición, lanzada en 2019, cambió sustancialmente las pautas para formatear manuscritos; Éstas modificaciones hicieron que aparecieran inconsistencias en el formato (por ejemplo, con la clase de LaTeX APA6) al momento de hacer cumplir las pautas de la 7ª edición. La clase APA7 resuelve este problema, y
+proporciona una nueva funcionalidad que no ofrece la clase APA6.
+
+\subsection{Descargo de responsabilidad}
+
+El autor ha tenido mucho cuidado para garantizar la coincidencia más cercana entre los requisitos de APA y la producción de esta clase. Sin embargo, es responsabilidad exclusiva del usuario garantizar el cumplimiento de los requisitos específicos de envío de la revista.
+
+\subsection{Diferencias entre APA 6 y APA 7}
+
+La forma en que funcionan los autores y las filiaciones se ha cambiado en la versión 2.01 para que cumplan con la 7ª edición de APA. Este cambio requerirá actualizar cualquier documento que contenga múltiples autores y/o filiaciones para usar los comandos nuevos \textbackslash authorsnames y \textbackslash autorsaffiliations. Además, la clase de documentos distintos comandos para darle una estructura al documento, como un nuevo comando para el resumen y las palabras clave, así como comandos para modificar los encabezados de las páginas del documento.
+
+\subsection{Uso}
+
+Basta con colocar el parámetro apa7 con el comando \textbackslash documentclass, con lo cual se tienen disponibles un gran número de opciones en el documento, los cuales podemos consultar en el enlace: https://ctan.math.washington.edu/tex-archive/macros/latex/contrib/apa7/apa7.pdf
+\end{document}

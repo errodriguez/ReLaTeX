@@ -1,0 +1,33 @@
+\documentclass[12pt,letterpaper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\author{Curso de LaTeX}
+\title{Personalizar los márgenes manualmente}
+%Modificar los margenes del documento manualmente
+\addtolength{\oddsidemargin}{-.1cm} %Reducir margen para páginas impares
+\addtolength{\evensidemargin}{-2cm} %Reducir margen para páginas pares
+\addtolength{\textwidth}{2cm} %Agregar al ancho del texto
+\addtolength{\topmargin}{-1.5cm} %Reducir margen superior
+\addtolength{\textheight}{2cm} %Agregar al alto del texto
+%Apagar la paginación del documento, para que no se muestre la paginación de los capítulos introductorios
+\pagestyle{empty}
+\begin{document}
+\frontmatter
+\maketitle
+\chapter*{Lorem ipsum dolor}
+% Debido a que el comando chapter hace que se vuelva a imprimir la paginación, hay que volver a apagarla con el comando:
+\thispagestyle{empty}
+\lipsum
+\tableofcontents
+% Con el comando tableofcontents ocurre lo mismo que con chapter, así que hay que aplicar nuevamente la corrección:
+\thispagestyle{empty}
+\mainmatter
+% Para el contenido principal volvemos al estilo de paginación por defecto:
+\pagestyle{plain}
+ \chapter{Volutpat leo habitant}
+\lipsum
+ \chapter{Adipiscing diam euismod}
+\lipsum[1]
+ \section{Curabitur quam}
+\lipsum[2]
+\end{document}

@@ -1,0 +1,62 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx} %Paquete para soportar columnas de ancho ajustable al de la página
+\usepackage{array} %Paquete para soportar columnas con un ancho específicado y alineación vertical
+\title{Tablas con textos ajustados}
+\author{Curso de introducción a LaTeX}
+\begin{document}
+\maketitle
+
+Problema:\\
+\begin{tabular}{r l}
+	\hline
+	Autor & Poema \\
+	\hline \hline
+	Espronceda & Con diez cañones por banda, viento en popa, a toda vela, no corta el mar, sino vuela un velero bergantín... \\
+	\hline
+	Bécquer & Volverán las oscuras golondrinas, en tu balcón sus nidos a colgar, y otra vez con el ala, a sus cristales jugando llamarán... \\
+	\hline
+\end{tabular} %Como vemos, el ancho de la última colúmna es demasiado grande
+
+\vspace{1cm}
+
+La solución es definir el ancho de la columna:\\
+\begin{tabular}{c p{5cm}}
+\hline
+Autor & Poema \\
+	\hline \hline
+	Espronceda & Con diez cañones por banda, viento en popa, a toda vela, no corta el mar, sino vuela un velero bergantín... \\
+	\hline
+	Bécquer & Volverán las oscuras golondrinas, en tu balcón sus nidos a colgar, y otra vez con el ala, a sus cristales jugando llamarán... \\
+	\hline
+\end{tabular}
+%Ahora la segunda columna tiene un ancho definido (5 cm) y su texto se ajusta a éste ancho, tomando la forma de un párrafo
+
+\vspace{1cm}
+
+Otra solución, es utilizar el entorno \texttt{tabularx} (del paquete \texttt{tabularx}): \\
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+Autor & Poema \\
+	\hline \hline
+	Espronceda & Con diez cañones por banda, viento en popa, a toda vela, no corta el mar, sino vuela un velero bergantín... \\
+	\hline
+	Bécquer & Volverán las oscuras golondrinas, en tu balcón sus nidos a colgar, y otra vez con el ala, a sus cristales jugando llamarán... \\
+	\hline
+\end{tabularx}\\
+%En este ejemplo, estamos diciendo que la tabla debe ocupar todo el ancho de la página y que la 2ª columna debe ocupar todo el ancho que le quede libre hasta que la tabla ocupe todo el ancho que le hemos establecido (el de la página). 
+
+\vspace{1cm}
+
+Una solución más, es utilizar alguno de los parámetros adicionales para el entorno \texttt{tabular} a los que nos da acceso el paquete \texttt{array}: \\
+\begin{tabular}{l|m{5cm}}
+	\hline
+	Autor & Poema \\
+	\hline
+	Espronceda & Con diez cañones por banda, viento en popa, a toda vela, no corta el mar, sino vuela un velero bergantín... \\
+	\hline
+	Bécquer & Volverán las oscuras golondrinas, en tu balcón sus nidos a colgar, y otra vez con el ala, a sus cristales jugando llamarán... \\
+	\hline
+\end{tabular}
+%En este último ejemplo, estamos diciendo que la segunda columna de la tabla debe tener un ancho de  5 cm y que su texto se ajuste a éste ancho, tomando la forma de un párrafo, pero además, la alineación vertical del resto de las columnas se ajusta al  medio (de ahí que el parámetro sea m).  Otra opción de alineación es b (bottom) . No hay una opción t (top), porque eso es equivalente a usar p{ancho}, como en uno de los ejemplos anteriores.
+\end{document}

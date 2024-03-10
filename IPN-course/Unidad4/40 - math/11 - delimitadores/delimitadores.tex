@@ -1,0 +1,62 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\author{Curso de \LaTeX}
+\title{Delimitadores}
+\begin{document}
+\maketitle
+
+Existe una variedad de delimitadores disponibles en \LaTeX:
+
+\begin{displaymath}
+( a ), [ b ], \{ c \}, | d |, \| e \|,
+\langle f \rangle, \lfloor g \rfloor,
+\lceil h \rceil
+\end{displaymath}
+
+\section{Cambio automático del tamaño}
+
+Muy a menudo las funciones matemáticas serán de diferentes tamaño, en cuyo caso los delimitadores que rodean la expresión deben adaptarse al tamaño de la expresión que contengan. Podemos ajustar automáticamente las dimensiones de un delimitador utilizando los comandos \textbackslash\texttt{left}, \textbackslash\texttt{right} y \textbackslash\texttt{middle}. Cualquiera de los delimitadores mencionados anteriormente puede ser utilizado en combinación con éstos comandos:
+
+\begin{displaymath}
+\left(\frac{x^2}{y^3}\right) %Encerramos la expresión dentro de dos paréntesis grandes
+\end{displaymath}
+
+\begin{displaymath}
+P\left(A=2\middle|\frac{A^2}{B}>4\right) %Colocamos en el centro de la expresión un delimitador vertical
+\end{displaymath}
+
+Las llaves se definen de manera diferente mediante el uso \textbackslash \texttt{left\textbackslash\{} y \textbackslash \texttt{right\textbackslash\}},
+
+\begin{displaymath}
+\left\{\frac{x^2}{y^3}\right\}
+\end{displaymath}
+
+Si solo se requiere un delimitador en un lado de la expresión, entonces tenemos que utilizar un delimitador invisible del otro lado utilizando un punto (.).
+
+\begin{displaymath}
+\left.\frac{x^3}{3}\right|_0^1
+\end{displaymath}
+
+\section{Cambio manual del tamaño}
+
+En ciertos casos, el tamaño producido por los comandos \textbackslash\texttt{left}, \textbackslash\texttt{right} y \textbackslash\texttt{middle} puede no ser el más deseable, o quizás querrás tener mayor control sobre el tamaño de los delimitadores. En estos casos, los comandos \textbackslash \texttt{big}, \textbackslash \texttt{Big}, \textbackslash\texttt{bigg} y \textbackslash \texttt{Bigg} pueden ser utilizados:
+
+\begin{displaymath}
+( \big( \Big( \bigg( \Bigg(
+\end{displaymath}
+
+Estos comandos son útiles principalmente cuando se trata de delimitadores anidados. Por ejemplo, cuando escribimos
+
+
+\begin{displaymath}
+\frac{\mathrm d}{\mathrm d x} \left( k g(x) \right)
+\end{displaymath}
+
+notamos que los comandos \textbackslash\texttt{left} y \textbackslash\texttt{right} producen delimitadores del mismo tamaño que los que están anidados dentro de ellos. Esto puede ser difícil de leer. Para arreglarlo, escribimos
+
+\begin{displaymath}
+\frac{\mathrm d}{\mathrm d x} \Big( k g(x) \Big)
+\end{displaymath}
+
+El cambio de tamaño manual también puede ser muy útil cuando una ecuación es muy larga, saliendo de los anchos de la página, y nos vemos forzados a separarla en diferentes líneas con el entorno align. Los comandos \textbackslash\texttt{left} y \textbackslash\texttt{right} nos arrojarían un error al colocarlos en líneas separadas, cosa que no ocurre con el conjunto de comandos \texttt{big}.
+\end{document}

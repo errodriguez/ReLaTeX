@@ -1,0 +1,48 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{chemfig}
+\author{Curso de \LaTeX}
+\title{Anillos}
+\begin{document}
+\maketitle
+
+Los anillos siguen la sintaxis $ < $átomo$ > $*$ < $n$ > $(código), donde ``n'' indica el número de caras del anillo y ``código'' representa el contenido específico de cada anillo (enlaces y átomos).
+
+\begin{center}
+\chemfig{A*6(-B-C-D-E-F-)}
+
+\chemfig{A*5(-B-C-D-E-)}
+
+\chemfig{*6(=-=-=-)}
+
+\chemfig{**5(-----)}
+\end{center}
+
+Cuando una molécula no es iniciada por un anillo y uno o más enlaces ya han sido dibujados, la posición por defecto del ángulo cambia: el anillo es dibujado de tal manera que el enlace que termina en el átomo de unión biseca el ángulo formado por los lados primero y último del anillo.
+
+\begin{center}
+\chemfig{A-B*5(-C-D-E-F-)}
+\end{center}
+
+Esta regla se mantiene, sin importar el ángulo del enlace precedente:
+
+\begin{center}
+\chemfig{A-[:25]B*4(----)}\vskip5pt
+\chemfig{A=[:-30]*6(=-=-=-)}
+\end{center}
+
+Para colocar enlaces alrededor del anillo colocamos un paréntesis después de cada uno de los enlaces internos del anillo:
+
+\begin{center}
+\chemfig{*6(-(-R^2)=-(-)=(-OH)-(-R^1)=)}
+\end{center}
+
+De esta forma, podemos unir dos anillos por medio de enlaces, colocando el nuevo anillo al interior de uno de los enlaces del primer anillo:
+
+\chemfig{
+  *6(-(-R^2)=-
+    (-=N-*6(=(-R^3)-=(-R^4)-=(-R^3)-))
+  =(-OH)-(-R^1)=)
+}
+\end{document}
+ 

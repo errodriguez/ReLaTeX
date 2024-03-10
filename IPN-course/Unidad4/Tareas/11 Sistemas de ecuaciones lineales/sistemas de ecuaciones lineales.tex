@@ -1,0 +1,74 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, mexico]{babel} %Para que el contenido del documento esté en español de México
+\usepackage[hidelinks]{hyperref} %Para el enlace al final del documento
+\usepackage{amsmath} %Para soportar el entorno matrix
+\usepackage{amsfonts} %Para soportar el comando de formato matemático \mathbb
+\title{Sistema de ecuaciones lineales}
+\author{Eduardo René Rodríguez Ávila}
+
+% Para que funcione las excepciones del silabeo
+\usepackage[T1]{fontenc}
+\hyphenation{tam-bién si-gui-en-te}
+
+
+\begin{document}
+
+\maketitle
+
+En matemáticas y álgebra lineal, un sistema de ecuaciones lineales, también conocido como sistema lineal de ecuaciones o simplemente sistema lineal, es un conjunto de ecuaciones lineales (es decir, un sistema de ecuaciones en donde cada ecuación es de primer grado), definidas sobre un cuerpo o un anillo conmutativo. Un ejemplo de sistema lineal de ecuaciones sería el siguiente:
+
+\[
+\left .
+\begin{array}{rcc}
+	2x_1  +  x_2 & = & 1 \\
+	x_1  +  x_2 & = & 4 \\
+\end{array}
+\right \} 
+\]
+
+El problema consiste en encontrar los valores desconocidos de las variables $x_1$ y $x_2$ que satisfacen las dos ecuaciones.
+
+El problema de los sistemas lineales de ecuaciones es uno de los más antiguos de la matemática y tiene una infinidad de aplicaciones, como en procesamiento digital de señales, análisis estructural, estimación, predicción y más generalmente en programación lineal así como en la aproximación de problemas no lineales de análisis numérico.
+
+En general, un sistema con m ecuaciones lineales y n incógnitas puede ser escrito en forma normal como:
+
+\[  
+\setlength\arraycolsep{1.5pt}
+\begin{array}{ccc ccc c @{\extracolsep{2.5pt}}c@{\extracolsep{2.5pt}}c}
+	a_{11}x_1 & + & a_{12}x_2 & + & \cdots & + & a_{1n}x_n & = & b_1 \\
+	a_{21}x_1 & + & a_{22}x_2 & + & \cdots & + & a_{2n}x_n & = & b_2 \\
+	\dots & & \dots & & \dots & &  \dots & &  \dots \\
+	a_{m1}x_1 & + & a_{m2}x_2 & + & \cdots & + & a_{mn}x_n & = & b_m \\
+\end{array}
+\]
+
+
+\noindent donde $x_1,\dots,x_n$ son las incógnitas y los números  $ a_{ij} \in \mathbb{K} $  son los co\-e\-fi\-ci\-en\-tes del sistema sobre el cuerpo $\mathbb{K} [= \mathbb{R}, \mathbb{C}, ...]$. Es posible reescribir el sistema separando con coeficientes con notación matricial:
+
+\begin{equation}
+  \begin{bmatrix}
+    a_{11} & a_{12}  & \dots & a_{1n} \\
+	a_{21} & a_{22} & \dots & a_{2n} \\
+	\vdots  & \vdots & \ddots & \vdots  \\
+	a_{m1} & a_{m2}  & \dots & a_{mn} 
+  \end{bmatrix}
+  \begin{bmatrix}
+	x_1 \\ x_2 \\ \vdots \\ x_n 
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+	b_1 \\ b_2 \\ \vdots \\ b_m
+  \end{bmatrix}
+\end{equation}
+
+Si representamos cada matriz con una única letra obtenemos:
+
+\[
+  \mathrm{\textbf{Ax}}=\mathrm{\textbf{b}}
+\]
+
+\noindent donde \textbf{A} es una matriz $m$ por $n$, \textbf{x} es un vector columna de longitud $n$ y \textbf{b} es otro vector columna de longitud $m$. El sistema de eliminación de Gauss-Jordan se aplica a este tipo de sistemas, sea cual sea el cuerpo del que provengan los coeficientes. La matriz \textbf{A} se llama matriz de coeficientes de este sistema lineal. A \textbf{b} se le llama vector de términos independientes del sistema y a \textbf{x} se le llama vector de incógnitas.
+
+Más información en: \url{http://es.wikipedia.org/wiki/Sistema_de_ecuaciones_lineales}
+\end{document}

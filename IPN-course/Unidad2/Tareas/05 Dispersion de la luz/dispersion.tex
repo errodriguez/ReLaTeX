@@ -1,0 +1,64 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[usenames,dvipsnames]{xcolor} %Para soportar los colores extendidos
+\usepackage{url} %Para incluir el hiperenlace a la fuente del documento
+\usepackage[spanish, mexico]{babel}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{shapepar} %For diamond text shape
+\usepackage{hyperref}
+
+\author{Tu nombre}
+\parskip=0.5cm
+
+
+\begin{document}
+	\begin{flushright}
+		\sffamily {\Large Dispersión refractiva}\\
+        {\color{gray}O dispersión de la luz}\\
+       Eduardo René Rodríguez Ávila
+	\end{flushright}
+
+La luz procedente de una estrella, conocida como luz blanca, es una superposición de luces de diferentes colores, las cuales presentan una longitud de onda y una frecuencia específicas. La dispersión de la luz es un fenómeno que se produce cuando un rayo de luz blanca atraviesa un medio transparente (por ejemplo un prisma) y se refracta, mostrando a la salida de éste los respectivos colores que la constituyen.
+
+\begin{sloppypar}
+La dispersión tiene su origen en una disminución en la velocidad de propagación de la luz cuando atraviesa el medio. Debido a que el material absorbe y reemite la luz cuya frecuencia es cercana a la frecuencia de oscilación natural de los electrones que están presentes en él, ésta luz se propaga un poco más despacio en comparación a luz de frecuencias distintas. Estas variaciones en la velocidad de propagación dependen del índice de refracción del material y hacen que la luz, para frecuencias diferentes, se refracte de manera diferente. En el caso de una doble refracción (como sucede en el prisma) se distinguen entonces de manera organizada los colores que componen la luz blanca: la desviación es progresiva, siendo mayor para frecuencias mayores (menores longitudes de onda); por lo tanto, la {\color{red}luz roja} es desviada de su trayectoria original en menor medida que la {\color{blue}luz azul}.
+\end{sloppypar}
+
+{\large \textbf{Ejemplo}}
+
+\begin{sloppypar}
+La descomposición de la luz blanca en los diferentes colores que la componen, data del siglo XVIII, debido al físico, astrónomo y matemático Isaac Newton.
+\end{sloppypar}
+
+La luz blanca se descompone en estos colores principales:
+\begin{itemize} [label=\textbullet]
+	\item {\color{red}Rojo (el color que sufre la menor desviación)}
+	\item {\color{orange}Anaranjado}.
+	
+	\item \colorbox{yellow}{Amarillo}.
+	
+	% Values from Digital Color Meter app using `vative values` scale
+	\definecolor{olive}{RGB}{0,148,79}
+	\item \colorbox{olive}{Verde}.
+
+	% Values from Digital Color Meter app using `vative values` scale
+	\definecolor{marine}{RGB}{34,49,245}	
+	\item {\color{marine}Azul}.
+	
+	% Values from Digital Color Meter app using `vative values` scale
+	\definecolor{fuchsia}{RGB}{76,58,122}	
+	\item {\color{fuchsia}Violeta (el color que sufre la mayor desviación)}.
+\end{itemize}
+
+
+Esto demuestra que la luz blanca está constituida por la superposición de todos estos colores. Cada uno de los cuales sufre una desviación distinta ya que el índice de refracción de, por ejemplo, el vidrio es diferente para cada uno de los colores.
+
+\hyphenation{ espectro es-pec-tro}
+\diamondpar {Si~la luz~de~un color~específico, proveniente~del espectro de la luz blanca, atravesara un \textbf{prisma},~esta no se descompondría en~otros colores ya que cada~color que compone el~espectro es un color puro o mo\-no\-cro\-má\-ti\-co.}
+
+\underline{Nota}: El texto anterior se logra utilizando el comando \textbackslash\texttt{diamondpar}, que se encuentra en el paquete \texttt{shapepar}.
+
+Más información en: {\url{http://es.wikipedia.org/wiki/Descomposici\%C3\%B3n_de_la_luz_blanca}
+	
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{rotating} %Para soportar la rotación por medio de los entornos sideways, turn y rotate
+\usepackage{graphicx}
+\title{Rotación}
+\author{Curso de introducción a LaTeX}
+\begin{document}
+\maketitle
+%Rotar 90° una imagen en contra de las manecillas del reloj:
+\includegraphics[angle=90]{img/canis}
+%
+%Otra forma de rotar imágenes o cualquier contenido:
+\rotatebox{90}{\includegraphics{img/canis}}
+\\
+\\
+%Incluimos una imagen como lo haríamos normalmetne
+\includegraphics[width=0.4\textwidth]{img/php}~
+%Ahora mostramos el reflejo de ésta imagen (funcionaría para cualquier otro contenido):
+\reflectbox{\includegraphics[width=0.4\textwidth]{img/php}}
+\\
+\\
+%Utilizando los entornos del paquete rotating
+%Rotar 90° cualquier contenido utilizando el entorno sideways:
+\begin{sideways}
+	\includegraphics{img/canis}
+\end{sideways}
+
+%Rotar cualquier contenido en el angulo que queramos con el entrono turn:
+\begin{turn}{30}
+	\includegraphics{img/canis}
+\end{turn}
+
+Y continuamos...
+
+%Rotar cualquier contenido en el ángulo deseado sacándolo del párrafo con el entrono rotate:
+\begin{rotate}{270}
+\includegraphics{img/canis}
+\end{rotate}
+\begin{center}
+Lorem ipsum dolor sit amet, nulla habitant vestibulum ac elit massa. Pellentesque pharetra imperdiet, ipsum arcu. Nulla cras in mi blandit exercitation, odio fringilla est aliquip id, aliquam nunc nulla dolor enim hymenaeos commodo, orci amet nec. Ac eu suspendisse erat suspendisse a aliquam. Blandit nunc, curabitur velit a purus pharetra. Odio vitae risus mauris turpis donec. Adipiscing arcu donec commodo, varius nibh ipsum quis morbi tellus vestibulum, rutrum urna ornare risus mauris. Nulla malesuada semper nostra, fermentum nisl urna wisi nullam, facilisis arcu tincidunt, libero urna posuere, ut proin dictum quis ac. Turpis fermentum reprehenderit duis quam aliquid, vestibulum in elementum enim. Odio dolor integer sapien eu, lorem wisi posuere aliquam urna, sapien penatibus eu vitae turpis. Cursus fusce at fermentum in massa iaculis, id et eleifend ligula mus condimentum justo, quis elit orci id duis nunc, integer sapien id, potenti dictum.
+\end{center}
+\end{document}

@@ -1,0 +1,30 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\title{Fuentes}
+\author{Curso de introducción a LaTeX}
+\renewcommand{\familydefault}{\sfdefault} %Cambia la fuente de todo el documento
+\begin{document}
+% Mostrando la nueva fuente por defecto (Sans serif):
+\maketitle
+Lorem ipsum dolor sit amet, consectitur adipiscing elit.
+
+% Volviendo a la fuente por defecto original (Computer Modern Roman):
+{\rmfamily Lorem ipsum dolor sit amet, consectitur adipiscing elit.}
+
+% Fuente Monospace (máquina de escribir):
+{\ttfamily Lorem ipsum dolor sit amet, consectitur adipiscing elit.}
+
+\vspace{0.5cm}
+
+Las fuentes posibles son Roman, Sans Serif y Typewriter,
+que se obtienen con las declaraciones \texttt{\textbackslash rmfamily}, \texttt{\textbackslash sffamily} y \texttt{\textbackslash ttfamily}.\\
+
+Pruébalo en el siguiente texto:\\
+
+\rmfamily Modern Roman.
+
+\sffamily Sans Serif font.
+
+\ttfamily Monospace font.
+
+\end{document}

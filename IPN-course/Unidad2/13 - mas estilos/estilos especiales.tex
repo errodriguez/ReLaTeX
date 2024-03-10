@@ -1,0 +1,20 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{soulutf8} %Para el subrayado y resaltado
+\usepackage{color} %Para que el resaltado tenga color amarillo
+\usepackage{fixltx2e} %Para soportar el uso de subíndices dentro del texto
+\title{Estilos de texto especiales}
+\author{Curso de introducción a LaTeX}
+\begin{document}
+ \maketitle
+ %Superíndice:
+ Te damos la bienvenida al  6\textsuperscript{to} Congreso Internacional de Ictiología 2013.
+ 
+ H\textsubscript{2}O es la fórmula de la molécula de agua.
+ 
+ %Al estílo matemático:
+ H$_2$O es la fórmula de la molécula de agua.
+ 
+ %Un subrayado que soporta salto de línea:
+ \ul{Volutpat leo habitant nullam eros faucibus, vulputate nunc luctus elit. Purus est eros lorem ut. Elementum in, neque adipiscing ut aliquam libero nonummy, eleifend justo donec exercitationem aliquam quis a, et lectus dolor fringilla lacinia praesent}, \hl{eleifend lobortis porttitor non luctus vitae sem. Voluptate quisque porttitor, nec etiam ut mi tincidunt venenatis}.
+\end{document}

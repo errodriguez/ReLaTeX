@@ -1,0 +1,46 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\author{Curso de \LaTeX}
+\title{Arreglos}
+\begin{document}
+\maketitle
+
+El entorno \texttt{array} (no hay que confundirlo con el paquete \texttt{array}) es similar al entorno \texttt{tabular} con la diferencia de que puede ser incluido en el entorno matemático. Por ejemplo:
+
+\[
+\left(
+\begin{array}{clrr}
+      a+b+c & uv & x-y & 27 \\
+       x+y  & w  & +z  & 363 \\
+       a & b & c & d
+\end{array}
+\right)
+\]
+
+\[
+\left(
+\begin{array}{clrr}
+	a+b+c & uv & x-y & 27 \\
+	x+y  & w  & +z  & 363 \\
+	a & b & c & d
+\end{array}
+\right), \begin{array}{rcrl}
+	2x & + & 4y & = 7\\
+ 	  x & + & 3y & = 6
+\end{array}
+\]
+
+Como vemos, el comando \textbackslash\textbackslash\ también es utilizado para ingresar saltos de línea en el arreglo.
+
+Los arreglos pueden ser utilizados en el mismo entorno que el resto de las expresiones matemáticas vistas hasta ahora:
+
+\begin{equation}
+X = \left[
+		\begin{array}{ccc}
+			x_1 & x_2 & \ldots \\
+			x_3 & x_4 & \ldots \\
+			\vdots & \vdots & \ddots
+		\end{array}
+	\right]
+\end{equation}
+\end{document}

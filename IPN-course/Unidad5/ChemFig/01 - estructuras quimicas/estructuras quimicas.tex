@@ -1,0 +1,109 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{chemfig}
+\author{Curso de \LaTeX}
+\title{Estructuras químicas}
+\begin{document}
+\maketitle
+
+\texttt{chemfig} es un paquete utilizado para dibujar gráficos químicos en 2D, basado en el paquete tikz, diseñado específicamente para representar expresiones químicas.
+
+\section{Uso básico}
+
+El primer comando que debemos aprender a usar con este paquete es \textbackslash\texttt{chemfig}:
+
+\begin{center}
+\chemfig{C-H}
+\end{center}
+
+El argumento que recibe este comando se subdivide en tres partes: el primer átomo, el tipo de enlace y el segundo átomo.
+
+Hay nueve tipos de enlaces soportados:
+
+\begin{center}
+\chemfig{A-B}\\
+\chemfig{A=B}\\
+\chemfig{A~B}\\
+\chemfig{A>B}\\
+\chemfig{A<B}\\
+\chemfig{A>:B}\\
+\chemfig{A<:B}\\
+\chemfig{A>|B}\\
+\chemfig{A<|B}
+\end{center}
+
+Podemos escribir varios enlaces de manera secuencial:
+
+\begin{center}
+\chemfig{H-C=S}
+\end{center}
+
+\section{Ángulo de los enlaces}
+
+Un enlace puede recibir una o más opciones entre corchetes, siendo la primera de ellas el ángulo que tendrá el enlace con respecto al último átomo.
+
+Hay 3 tipos de ángulos que podemos definir: absolutos, relativos y predefinidos. Los absolutos indican un ángulo preciso (generalmente de 0 a 360, aunque también pueden ser negativos) y son representados con la sintaxis [:$ < $ángulo absoluto$ > $]. Por ejemplo:
+
+\begin{center}
+\chemfig{C-[:45]H}
+\end{center}
+
+Los ángulos relativos requieren la sintaxis  [::$ < $ángulo relativo$ > $] y producen un ángulo relativo al del enlace anterior. Por ejemplo:
+
+\begin{center}
+\chemfig{H-[:45]C-[::45]H}
+\end{center}
+
+Finalmente, los ángulos predefinidos son números enteros que van del 0 al 7 indicando intervalos de 45°:
+
+\begin{center}
+\chemfig{C-[1]H}
+
+\chemfig{A-B-[1]C-[3]-D}
+\end{center}
+
+\section{Coeficiente del enlace}
+
+La segunda opción que puede recibir un enlace, es el coeficiente del enlace:
+
+\begin{center}
+ \chemfig{H-C=[:45, 1.5]S}
+\end{center}
+
+Con el cual describimos el tamaño del enlace.
+
+\section{Átomos de salida y arribo }
+
+La tercer y cuarta opción del ángulo se utiliza cuando agrupamos varios átomos en un solo elemento de la estructura química y deseamos controlar qué átomos serán los que se conectaran. Por ejemplo, si consideramos los siguientes conjuntos:
+
+\begin{flushleft}
+\chemfig{ABCD-[:75]EFG}\quad
+\chemfig{ABCD-[:-85]EFG}\quad
+\chemfig{ABCD-[1]EFG}
+\end{flushleft}
+
+Veremos que \LaTeX siempre utiliza el último y primer átomo de cada conjunto para realizar el enlace. Utilizando las opciones del enlace que mencionamos, podemos cambiar este comportamiento:
+
+\begin{flushleft}
+\chemfig{ABCD-[:75,,2,3]EFG}\qquad
+\chemfig{ABCD-[:75,,,2]EFG}\qquad
+\chemfig{ABCD-[:75,,3,2]EFG}
+\end{flushleft}
+
+\section{Código \texttt{tikz}}
+
+Finalmente, hay una quinta opción que podemos escribir con la que especificamos las características del gráfico dibujado con código del paquete \texttt{tikz}:
+
+\begin{center}
+ \chemfig{H-C=[:45, 1.2,,, draw=none]S}
+ 
+ \chemfig{A-[,,,,red]B}
+ 
+ \chemfig{A-[,,,,dash pattern=on 4pt off 2pt]B}
+ 
+ \chemfig{A-[,,,,line width=2pt]B}
+ 
+ \chemfig{A-[,,,,red,line width=2pt]B}
+\end{center}
+
+\end{document}

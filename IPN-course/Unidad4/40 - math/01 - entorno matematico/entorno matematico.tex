@@ -1,0 +1,23 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\title{El entorno matemático}
+\author{Curso de \LaTeX}
+\begin{document}
+\maketitle
+
+Para escribir expresiones matemáticas en \LaTeX\ tenemos que capturarlas dentro del entorno matemático.
+
+Este entorno matemático puede aparecer dentro de las líneas de nuestro texto, o en un entorno de visualización especial, que estará separado del resto del texto. 
+
+Para incluir una expresión matemática en una línea del texto, colocamos nuestra expresión matemática dentro de los símbolos \$ ... \$, que son los delimitadores del entorno matemático en línea con el texto, tal y como se muestra en el siguiente ejemplo:
+
+... si $x=0$ entonces $y^2 = 4p+7$, pero si damos otro valor a $x$ no se que pase ... 
+
+Noten que la tipografía aplicada las literales $x$ y $y$ es distinta a la de un texto común (x y).
+
+%Nota: los delimitadores \( y \) y el entorno math también pueden ser utilizados para escribir expresiones matemáticas en línea con el texto al igual que $ y $.
+
+\(x\) y \(y\)
+
+También, podemos escribir expresiones más largas como $k_{n+1}=n^2 + k_n^2 - k_{n-1}$ ó $Y_{(ij)} = \mu + t_i + \epsilon  j (i) $
+\end{document}

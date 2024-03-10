@@ -1,0 +1,33 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\author{Curso de \LaTeX}
+\title{Fracciones continuas}
+\begin{document}
+\maketitle
+
+Si queremos que una fracción en línea con el texto no se compacte verticalmente, podemos usar los comandos \texttt{\textbackslash dfrac} y \texttt{\textbackslash cfrac}\footnote{Ambos requieren el paquete \texttt{amsmath}}, por ejemplo con el primer comando obtenemos $ \dfrac{2}{7} $.
+
+También podemos utilizar este comando para prevenir la compactación de fracciones en un entorno separado del texto:
+
+\begin{displaymath}
+	\frac{\dfrac{1}{x}+\dfrac{1}{y}}{y-z}
+\end{displaymath}
+
+Pero, las fracciones continuas se deben escribir utilizando el comando \texttt{\textbackslash cfrac}:
+
+\begin{equation}
+  x = a_0 + \cfrac{1}{a_1
+          + \cfrac{1}{a_2
+          + \cfrac{1}{a_3 + \cfrac{1}{a_4} } } }
+\end{equation}
+
+Ya que el comando \texttt{\textbackslash dfrac} no mantiene un espaciado vertical uniforme:
+
+\begin{equation}
+	x = a_0 + \dfrac{1}{a_1
+		+ \dfrac{1}{a_2
+		+ \dfrac{1}{a_3 + \dfrac{1}{a_4} } } }
+\end{equation}
+
+\end{document}

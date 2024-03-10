@@ -1,0 +1,48 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} %Para soportar el comando \binom
+\author{Curso de \LaTeX}
+\title{Fracciones y binomiales}
+\begin{document}
+\maketitle
+
+Una fracción es creada utilizando el comando \textbackslash \texttt{frac\{númerador\}\{denominador\}}. (Para aquellos que no lo recuerden, esos son la parte de arriba y la parte de abajo de la fracción respectivamente). Por ejemplo:
+
+\begin{equation}
+\frac{4}{5}
+\end{equation}
+
+\begin{equation}
+\frac{x + 2}{y^2}
+\end{equation}
+
+El coeficiente binomial puede ser representado utilizando el comando \textbackslash \texttt{choose}:
+
+\begin{displaymath}
+	\frac{n!}{k!(n-k)!} = {n \choose k}
+\end{displaymath}
+
+Una alternativa para representar el coeficiente binomial es utilizar el comando \textbackslash \texttt{binom}\footnote{Requiere del paquete \texttt{amsmath}}:
+
+\begin{displaymath}
+\frac{n!}{k!(n-k)!} = \binom{n}{k}
+\end{displaymath}
+
+También podemos representar fracciones utilizando el comando \textbackslash\texttt{over}:
+
+\begin{equation}
+x + 2 \over y^2
+\end{equation}
+
+\begin{equation}
+{n! \over k!(n-k)!} = {n \choose k}
+\end{equation}
+
+Puedes además embeber una fracción dentro de otra:
+
+\begin{displaymath}
+\frac{\frac{1}{x}+\frac{1}{y}}{y-z}
+\end{displaymath}
+
+Noten que al escribir una fracción $ \frac{2}{7} $ dentro del texto, esta es significativamente más pequeña a si la escribiéramos en dentro de un entorno de visualización especial.
+\end{document}
